@@ -2,6 +2,8 @@
 
 ###### Towers of Hanoi is an ancient mathematical puzzle that starts off with three stacks of many disks.
 
+###### I will be using Node and Stack to implement the game.
+
 ## Objective: 
 
 ###### The person has to move the stack of the disks from the left stack to the right stack.

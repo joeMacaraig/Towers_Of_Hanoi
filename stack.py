@@ -9,13 +9,25 @@ class Stack:
         self.name = name 
 
     def push(self, value):
-        pass 
+        if self.has_space():
+            item = Node(value)
+            item.set_next_node(self.top_item)
+            self.top_item = item 
+            self.size += 1
+        else: 
+            print("No Room")
 
     def pop(self): 
-        pass
+        if self.size > 0: 
+            item_to_remove = self.top_item
+            self.top_item = item_to_remove.get_next_node()
+            self.size -= 1
+        print("Stack is empty")
 
     def peek(self):
-        pass
+        if self.size > 0:
+            return self.top_item.get_value()
+        print("Peeking")
 
     def has_space(self):
         return self.limit > self.size
